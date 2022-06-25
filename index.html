@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+
+  <title>Notes App</title>
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+  <header class="header">
+    <h1>Notes App</h1>
+    <button class="newNote" style="width: 122.5px;" onclick="toggleElement(document.getElementsByClassName('newNoteBox')[0])">
+      <span class="material-icons outlined">add</span>
+      <span>Add Note</span>
+    </button>
+  </header>
+  <main class="main">
+    <h2 style="margin-top: -10px; font-size: 1.5em;">Your Notes</h2>
+    <div class="notesarea"></div>
+    <div class="overlay"></div>
+    <div class="toast activ">
+      Note saved successfully
+    </div>
+  </main>
+  <footer class="footer">
+
+  </footer>
+  <div class="newNoteBox">
+  <header class="header">
+    <h1>Notes App</h1>
+    <button class="newNote" id="saveNote" style="width: 122.5px;">
+      <span class="material-icons outlined">save</span>
+      <span>Save Note</span>
+    </button>
+  </header>
+  <main class="main">
+    <div class="mainBox">
+      <h2 class="title" contenteditable="" data-placeholder="Title"></h2>
+      <!-- <div class="timeBox">Today, 08:59AM</div> -->
+      <div class="noteBox" contenteditable="" data-placeholder="Add your note here..."></div>
+    </div>
+    <!-- <div class="imgBox">
+      <h2>Images</h2>
+        <button class="addImage">
+          <span class="material-icons outlined">add</span>
+        </button>
+        <div class="imgWrapper">
+          <span class="material-icons outlined">more_vert</span>
+          <div class="dialog">
+            <button class="deleteImg">Delete</button>
+          </div>
+          <img src="https://cdn4.buysellads.net/uu/1/41334/1550855391-cc_dark.png" alt="" />
+        </div>
+        <div class="imgWrapper">
+          <span class="material-icons outlined">more_vert</span>
+          <div class="dialog active">
+            <button class="deleteImg">Delete</button>
+          </div>
+          <img src="https://cdn.dribbble.com/users/844462/screenshots/13966457/media/bf8bac6f689fd7567bc3ece56c914142.png?compress=1&resize=700x525&vertical=top" alt="">
+        </div>
+        <div class="imgWrapper">
+          <span class="material-icons outlined">more_vert</span>
+          <div class="dialog active">
+            <button class="deleteImg">Delete</button>
+          </div>
+          <img src="https://picsum.photos/400" alt="">
+        </div>
+    </div> -->
+    <div class="toast">
+      Note saved successfully
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="toolbar">
+      <button class="tools" id="bold">
+        <span class="material-icons">format_bold</span>
+      </button>
+      <button class="tools" id="italic">
+        <span class="material-icons">format_italic</span>
+      </button>
+      <button class="tools" id="underline">
+        <span class="material-icons">format_underlined</span>
+      </button>
+      <button class="tools" id="strikeThrough">
+        <span class="material-icons">strikethrough_s</span>
+      </button>
+      <button class="tools" id="subscript">
+        <span class="material-icons">subscript</span>
+      </button>
+      <button class="tools" id="superscript">
+        <span class="material-icons">superscript</span>
+      </button>
+      <button class="wide" id="foreColor">
+        <span class="material-icons">format_color_text</span>
+        <input type="color" id="color-text" value="#ffffff">
+      </button>
+      <button class="wide" id="backColor">
+        <span class="material-icons">format_color_fill</span>
+        <input type="color" id="color-text-fill" value="transparent">
+      </button>
+      <button class="tools" id="cut">
+        <span class="material-icons">content_cut</span>
+      </button>
+      <button class="tools" id="copy">
+        <span class="material-icons">content_copy</span>
+      </button>
+      <button class="tools" id="paste">
+        <span class="material-icons">content_paste</span>
+      </button>
+      <button class="tools" id="undo">
+        <span class="material-icons">undo</span>
+      </button>
+      <button class="tools" id="redo">
+        <span class="material-icons">redo</span>
+      </button>
+      <button class="tools" id="selectAll">
+        <span class="material-icons">select_all</span>
+      </button>
+    </div>
+  </footer>
+  </div>
+  <div class="loaderContainer">
+    <div class="loader"></div>
+  </div>
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+
+</html>
